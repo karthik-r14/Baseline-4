@@ -18,6 +18,7 @@ public class Commodity {
         exemptCommodity.add("book");
         exemptCommodity.add("chocolate bar");
         exemptCommodity.add("headache pills");
+        exemptCommodity.add("box of chocolates");
 
         return exemptCommodity.contains(commodityName);
     }
