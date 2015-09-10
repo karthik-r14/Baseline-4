@@ -45,13 +45,13 @@ public class TestCommodity {
     public void shouldHaveNoSalesTaxIfCommodityIsExemptedFromSalesTax() {
         Commodity commodity = new Commodity("chocolate bar", 0.85);
 
-        assertEquals(0.0, commodity.salesTax(), 0.001);
+        assertEquals(0.0, commodity.computeSalesTax(), 0.001);
     }
 
     @Test
     public void shouldHaveSalesTaxIfCommodityIsNotExemptedFromSalesTax() {
         Commodity commodity = new Commodity("bottle of perfume", 18.99);
 
-        assertEquals(1.90, commodity.salesTax(), 0.0001);
+        assertEquals(1.90, commodity.computeSalesTax(), 0.0001);
     }
 }

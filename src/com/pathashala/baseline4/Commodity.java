@@ -23,7 +23,7 @@ public class Commodity {
         return exemptedCommodities.contains(commodityName);
     }
 
-    public double salesTax() {
+    public double computeSalesTax() {
 
         if(isExemptedFromSalesTax())
             return 0.0;
