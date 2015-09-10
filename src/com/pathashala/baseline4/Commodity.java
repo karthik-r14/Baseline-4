@@ -24,6 +24,10 @@ public class Commodity {
     }
 
     public double salesTax() {
-        return 0;
+
+        if(isExemptedFromSalesTax())
+            return 0.0;
+        else
+            return Math.ceil((0.10 * commodityPrice) * 20.0) / 20.0;
     }
 }
