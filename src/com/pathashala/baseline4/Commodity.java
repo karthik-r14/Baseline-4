@@ -14,12 +14,16 @@ public class Commodity {
     }
 
     public boolean isExemptedFromSalesTax() {
-        ArrayList<String> exemptCommodity = new ArrayList<>();
-        exemptCommodity.add("book");
-        exemptCommodity.add("chocolate bar");
-        exemptCommodity.add("headache pills");
-        exemptCommodity.add("box of chocolates");
+        ArrayList<String> exemptedCommodities = new ArrayList<>();
+        exemptedCommodities.add("book");
+        exemptedCommodities.add("chocolate bar");
+        exemptedCommodities.add("headache pills");
+        exemptedCommodities.add("box of chocolates");
 
-        return exemptCommodity.contains(commodityName);
+        return exemptedCommodities.contains(commodityName);
+    }
+
+    public double salesTax() {
+        return 0;
     }
 }
