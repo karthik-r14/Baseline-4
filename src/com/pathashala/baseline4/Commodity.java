@@ -1,6 +1,8 @@
 //A commodity has a name, price and salesTax may be levied on it based on type of commodity.
 package com.pathashala.baseline4;
 
+import java.util.ArrayList;
+
 public class Commodity {
 
     private String commodityName;
@@ -12,6 +14,11 @@ public class Commodity {
     }
 
     public boolean isExemptedFromSalesTax() {
-        return commodityName.equals("book");
+        ArrayList<String> exemptCommodity = new ArrayList<>();
+        exemptCommodity.add("book");
+        exemptCommodity.add("chocolate bar");
+
+        return exemptCommodity.contains(commodityName);
+
     }
 }

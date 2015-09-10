@@ -19,4 +19,11 @@ public class TestCommodity {
 
         assertEquals(false, commodity.isExemptedFromSalesTax());
     }
+
+    @Test
+    public void shouldBeExemptedFromSalesTaxIfCommodityIsChocolateBar() {
+        Commodity commodity = new Commodity("chocolate bar", 0.85);
+
+        assertEquals(true, commodity.isExemptedFromSalesTax());
+    }
 }
