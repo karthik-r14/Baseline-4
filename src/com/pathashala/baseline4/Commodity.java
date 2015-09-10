@@ -12,6 +12,6 @@ public class Commodity {
     }
 
     public boolean isExemptedFromSalesTax() {
-        return commodityName.equals("book");
+        return true;
     }
 }
