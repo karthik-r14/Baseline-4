@@ -17,8 +17,8 @@ public class Commodity {
         ArrayList<String> exemptCommodity = new ArrayList<>();
         exemptCommodity.add("book");
         exemptCommodity.add("chocolate bar");
+        exemptCommodity.add("headache pills");
 
         return exemptCommodity.contains(commodityName);
-
     }
 }
