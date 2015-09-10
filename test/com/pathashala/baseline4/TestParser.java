@@ -7,8 +7,15 @@ import static org.junit.Assert.assertTrue;
 public class TestParser {
 
     @Test
-    public void shouldReturnACommodityOnParsingTheInputString() {
+    public void shouldReturnACommodityOnParsingASampleInputString1() {
         Parser parser = new Parser("1 music CD at 14.99");
+
+        assertTrue(parser.parse() instanceof Commodity);
+    }
+
+    @Test
+    public void shouldReturnACommodityOnParsingASampleInputString2() {
+        Parser parser = new Parser("1 book at 12.49");
 
         assertTrue(parser.parse() instanceof Commodity);
     }

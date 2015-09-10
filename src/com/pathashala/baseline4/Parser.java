@@ -10,7 +10,8 @@ public class Parser {
     }
 
     public Commodity parse() {
-        return new Commodity("Music Cd", 18.99);
+        String[] parts = parseString.split(" ");
+        return new Commodity(parts[1], Double.parseDouble(parts[parts.length-1]));
     }
 }
 
