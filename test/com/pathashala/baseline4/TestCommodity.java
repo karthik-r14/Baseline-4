@@ -54,4 +54,20 @@ public class TestCommodity {
 
         assertEquals(1.90, commodity.computeSalesTax(), 0.0001);
     }
+
+    @Test
+    public void shouldReturnTrueOnComparingWithACommodityOfSameNameAndPrice() {
+        Commodity commodity1 = new Commodity("bottle of perfume", 18.99);
+        Commodity commodity2 = new Commodity("bottle of perfume", 18.99);
+
+        assertEquals(true, commodity1.compareWithCommodity(commodity2));
+    }
+
+    @Test
+    public void shouldReturnFalseOnComparingWithACommodityOfDifferntNameAndPrice() {
+        Commodity commodity1 = new Commodity("bottle of perfume", 18.99);
+        Commodity commodity2 = new Commodity("book", 12.49);
+
+        assertEquals(false, commodity1.compareWithCommodity(commodity2));
+    }
 }

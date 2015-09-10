@@ -25,9 +25,13 @@ public class Commodity {
 
     public double computeSalesTax() {
 
-        if(isExemptedFromSalesTax())
+        if (isExemptedFromSalesTax())
             return 0.0;
         else
             return Math.ceil((0.10 * commodityPrice) * 20.0) / 20.0;
+    }
+
+    public boolean compareWithCommodity(Commodity that) {
+        return (that.commodityName.equals(this.commodityName) && that.commodityPrice - this.commodityPrice <= 0.1);
     }
 }
